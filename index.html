@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <script src="myscript.js" defer></script>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #eaf7ff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    form {
+        background: #8EC5FC;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        min-width: 500px    ;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    label {
+        font-weight: bold;
+        margin-left: 3.5em;
+    }
+    input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+        transition: border 0.3s ease-in-out;
+    }
+    input.error {
+        border: 2px solid #e0005e; 
+    }
+    button {
+        background-color: #e0005e;
+        color: white;
+        padding: 10px 0 10px 0;
+        width: 75%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 auto;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: #e0005e;
+        font-size: 0.8em;
+        display: block;
+        margin: 0 auto 0 auto;
+        width: 75%;
+    }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <h2>Sign Up</h2>
+
+        <label>Full Names</label>
+        <input type="text" id="fullName" placeholder="Enter Full Names" required>
+        <span class="error" id="fullNameError"></span>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <span class="error" id="emailError"></span>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+        <span class="error" id="phoneError"></span>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <span class="error" id="passwordError"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
